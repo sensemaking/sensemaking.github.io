@@ -2,6 +2,7 @@
 title: Consulting
 datestamp: 2015-08-18T13:50:00+01:00
 author: Chris Meek
+description: If you need the best quality software developers in the business then come to us!
 ---
 
 The success of any software project depends critically on the people involved. That's why we only employ the best developers out there. When a sense|making developer is embedded into one of your teams you can relax knowing you're getting value for money much more than your average developer can offer.

@@ -2,6 +2,7 @@
 title: Effective Delivery
 datestamp: 2015-08-17T13:50:00+01:00
 author: Chris Meek
+description: How @sense_making uses the best of Lean and Agile practices to deliver your business' software quickly and with quality.
 ---
 
 Our Effective Delivery process focuses on what is most important to your project; delivering real value to your business and clients as quickly as possible. We do this by relying on our experience of lean, agile and empirical techniques giving you complete visibility and control over your project. This is combined with an unwavering commitment to quality and software design produces products that;
