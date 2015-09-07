@@ -174,10 +174,14 @@
                 $(".spinner").hide();
                 var message = $("#contact-success").show();
                 setTimeout(function() { message.fadeOut() }, 5000);
+
+                ga('send','event','contact','success', $("#Email").val())
             }).fail(function() {
                 $(".spinner").hide();
                 var message = $("#contact-fail").show();
                 setTimeout(function() { message.fadeOut() }, 5000);
+
+                ga('send','event','contact','fail', $("#Email").val())
             });
 
             e.preventDefault();
