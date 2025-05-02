@@ -1,0 +1,22 @@
+---
+import { getCollection, render } from 'astro:content'
+import StandardLayout from "../../layouts/standard.astro";
+
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles')
+  return articles.map(article => ({
+    params: { slug: article.data.slug },
+    props: { article },
+  }))
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+---
+
+<StandardLayout title={article.data.title}>  
+  <div class="p-32 prose max-w-none">
+    <Content />
+  </div>
+</StandardLayout> 
