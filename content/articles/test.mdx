@@ -1,5 +1,6 @@
 ---
 title: Example Article
+description: This is a sample article to test GitHub Flavored Markdown.
 published: 2023-10-01
 slug: example-article
 ---
@@ -67,7 +68,7 @@ __Bold__
 
 ## Images
 
-![Octocat](/logo_dark.png)
+![Astro](/favicon.svg)
 
 ---
 
@@ -134,6 +135,19 @@ def greet(name):
 <div style="color: red; font-weight: bold;">
 This is raw HTML inside Markdown!
 </div>
+
+---
+
+```mermaid
+graph TD
+    S((Start)) --> A[Ensure Astro 5.5+]
+    A --> B[Install necessary dependencies]
+    B --> C[Change Astro configuration]
+    C --> D{Need to deploy?}
+    D -- Yes --> E[Make sure Playwright gets installed]
+    D -- No --> F((Finished))
+    E --> F
+```
 
 ---
 

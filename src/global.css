@@ -1,0 +1,44 @@
+:root {
+    --colour-base: oklch(1 0 360);
+	--colour-surface: oklch(0.8 0 360);
+	--colour-overlay: oklch(0.6 0 360);
+	--colour-muted: oklch(0.4 0 360);
+	--colour-subtle: oklch(0.2 0 360);
+	--colour-text: oklch(0.252 0 0);
+	--colour-a: oklch(0.5882 0.2281 27);
+	--colour-b: oklch(0.8429 0.11 74.6);
+	--colour-c: oklch(0.2882 0.2281 27);
+	--colour-d: oklch(0.7604 0.1741 129.85);
+	--colour-e: oklch(0.6693 0.0881 226.95);
+	--colour-f: oklch(0.5168 0.2151 321.24);
+
+	--astro-code-color-text: var(--colour-text);
+	--astro-code-color-background: var(--colour-surface);
+	--astro-code-token-constant: var(--colour-b);
+	--astro-code-token-string: var(--colour-b);
+	--astro-code-token-comment: var(--colour-subtle);
+	--astro-code-token-keyword: var(--colour-e);
+	--astro-code-token-parameter: var(--colour-f);
+	--astro-code-token-function: var(--colour-c);
+	--astro-code-token-string-expression: var(--colour-d);
+	--astro-code-token-punctuation: var(--colour-muted);
+	--astro-code-token-link: var(--colour-f);
+}
+
+html {
+    font-size: 87.5%;
+}
+
+body {
+    background: var(--colour-base);
+    color: var(--colour-text);
+
+    font-family: system-ui, sans-serif;
+    font-weight: normal;
+    font-size: 1em;
+}
+
+a {
+    color: var(--colour-text);
+    text-decoration: none;
+}

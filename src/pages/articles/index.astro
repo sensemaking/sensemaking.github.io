@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+import Standard from "../../layouts/Standard.astro";
+
+const articles = await getCollection("articles");
+---
+
+<Standard title="Articles">
+    <div class="articles">
+        <h1>Articles</h1>
+        <p>These are the articles in the site.  They are all in the <code>/content/articles</code> directory.</p>
+
+        <ul>
+            {articles.map((article) => (
+                <li>
+                    <a href={`/articles/${article.data.slug}`}>{article.data.title}</a>
+                </li>
+            ))}
+        </ul>
+    </div>
+</Standard>
+
+<style>
+    .articles {
+        padding: 1rem;
+    }
+</style>

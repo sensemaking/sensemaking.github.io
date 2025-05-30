@@ -1,14 +1,17 @@
 // @ts-check
 import { defineConfig } from 'astro/config'
+import rehypeMermaid from 'rehype-mermaid'
 
-import mdx from '@astrojs/mdx'
-import tailwindcss from "@tailwindcss/vite"
+import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-  vite: {
-    plugins: [tailwindcss()],
+  markdown: {
+    syntaxHighlight: {
+      type: 'shiki',
+      excludeLangs: ['mermaid']
+    },
+    rehypePlugins:[[rehypeMermaid, { strategy: 'img-svg', dark: true, colorScheme: 'forest' }]]
   },
-  site: 'https://www.sensemaking.uk.com',
   integrations: [mdx()]
 });

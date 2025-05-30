@@ -1,66 +1,99 @@
 ---
-import StandardLayout from "../layouts/standard.astro";
+import Button from "../components/Button.astro";
+import Textbox from "../components/Textbox.astro";
+import Standard from "../layouts/Standard.astro";
 ---
 
-<StandardLayout title="sense|making">
-	<div class="h-400 bg-cover bg-center bg-clip-padding bg-[url('/hero.jpg')] p-32">
-		<div class="bg-(--brand-primary) text-white p-16 max-w-400">
-			<h1 class="text-4xl">Software. Simplified.</h1>
-			<p>We make large software projects easy to manage.</p>
+<Standard title="sense|making: Software Simplified">
+	<div class="hero">
+		<h1>Software. Simplified.</h1>
+		<p>We make large scale software projects easy to manage.</p>
+	</div> 	
+
+	<section class="colour-d">
+		<h2>Evolutionary Architecture</h2>
+		<p>We are evolutionary architects and have assisted many clients make organisational scale technical changes moving towards small, simple, independent, robust distributed services that are easy to deploy.</p>
+	</section>
+
+	<section class="colour-e">
+		<h2>Personal Approach</h2>
+		<p>Our favoured approach is based on embedded expertise over documentary instruction. We focus closely on strategic technical decision making whilst working within teams to implement them in parallel with delivering product features.</p>
+	</section>
+
+	<section class="colour-f">
+		<h2>Product Focus</h2>
+		<p>The reason we are successful is that we have learned how to ensure techinical changes progress in line with business priorities. We develop a mindset where technical changes are not so big that they bring throughput to a halt but neither so small that they have no meaningful impact.</p>
+	</section>
+
+	<section class="contact">
+		<h2>Get in touch!</h2>
+		<div>
+			<Textbox label="Name" placeholder="Devy McDevFace" />
+			<Textbox label="Email" placeholder="devy@example.com" />
+			<Button>I'm in!</Button>
 		</div>
-	</div>
+	</section>
 
-	<div class="flex gap-64 p-64">
-		<p class="flex-1 flex flex-col items-center gap-16 p-16 rounded-[4px] shadow-(--shadow-elevation-medium)">
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				fill="none"
-				viewBox="0 0 24 24"
-				stroke-width="1.5"
-				stroke="currentColor"
-				class="w-64"
-			>
-				<path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					d="M2.25 6 9 12.75l4.286-4.286a11.948 11.948 0 0 1 4.306 6.43l.776 2.898m0 0 3.182-5.511m-3.182 5.51-5.511-3.181"
-				></path>
-			</svg>
+</Standard>
 
-			We are evolutionary architects and have assisted many clients make
-			organisational scale technical changes moving towards small, simple,
-			independent, robust distributed services that are easy to deploy.
-			Our favoured approach is based on embedded expertise over
-			documentary instruction. We focus closely on strategic technical
-			decision making whilst working within teams to implement them in
-			parallel with delivering product features.
-		</p>
+<style>
+	.hero {
+		margin: 3rem 0;
+		text-align: center;
 
-		<p class="flex-1 flex flex-col items-center gap-16 p-16 rounded-[4px] shadow-(--shadow-elevation-medium)">
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				fill="none"
-				viewBox="0 0 24 24"
-				stroke-width="1.5"
-				stroke="currentColor"
-				class="w-64"
-			>
-				<path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23-.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"
-				></path>
-			</svg>
+		> h1 {
+			margin-bottom: 2rem;
+		}
+		
+		> * {
+			max-width: 48rem;
+			margin: 0 auto 1rem auto;
+		}
+	}
 
-			The reason we are successful is that we have learned how to ensure
-			techinical changes progress in line with business priorities. We
-			develop a mindset where technical changes are not so big that they
-			bring throughput to a halt but neither so small that they have no
-			meaningful impact.
-		</p>
-	</div>
+	section {
+		padding: 1rem 2rem;
 
-	<div class="flex justify-center">
-		<a href="mailto:info@sensemaking.uk.com" class="px-16 py-8 bg-(--brand-success) text-white font-bold text-2xl">Get in touch to start yor journey</a>
-	</div>
-</StandardLayout>
+		> * {
+			max-width: 48rem;
+			margin: 0 auto 1rem auto;
+		}
+	}
+
+	.contact {
+		> div {
+			display: flex;
+			gap: 1rem;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+	}
+
+	.colour-a {
+		background-color: var(--colour-a);
+	}
+
+	.colour-b {
+		background-color: var(--colour-b);
+		color: var(--colour-base);
+	}
+
+	.colour-c {
+		background-color: var(--colour-c);
+		color: var(--colour-base);
+	}
+
+	.colour-d {
+		background-color: var(--colour-d);
+	}
+
+	.colour-e {
+		background-color: var(--colour-e);
+		color: var(--colour-base);
+	}
+
+	.colour-f {
+		background-color: var(--colour-f);
+		color: var(--colour-base);
+	}
+</style>
