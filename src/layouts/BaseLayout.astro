@@ -1,0 +1,35 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { 
+  title = "sense|making | Evolutionary Architecture for Legacy Systems",
+  description = "sense|making - A software consultancy specializing in evolutionary architecture to transform complex legacy codebases."
+} = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header />
+		
+		<slot />
+		
+		<Footer />
+		
+		<script src="../scripts/header-scroll.js"></script>
+	</body>	
+</html>

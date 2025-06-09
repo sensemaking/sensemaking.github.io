@@ -1,17 +1,7 @@
 // @ts-check
-import { defineConfig } from 'astro/config'
-import rehypeMermaid from 'rehype-mermaid'
-
-import mdx from '@astrojs/mdx';
+import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  markdown: {
-    syntaxHighlight: {
-      type: 'shiki',
-      excludeLangs: ['mermaid']
-    },
-    rehypePlugins:[[rehypeMermaid, { strategy: 'img-svg', dark: true, colorScheme: 'forest' }]]
-  },
-  integrations: [mdx()]
+  // No integrations needed for standard Astro styling
 });
