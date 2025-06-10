@@ -1,5 +1,11 @@
 # Changelog
 
+## June 10, 2025
+- Added stylish, custom SVG icons to approach section cards
+- Implemented interactive hover effects for card icons
+- Enhanced card styling with subtle shadows and animations
+- Used oklch color format for icon gradients to align with brand guidelines
+
 ## June 9, 2025
 - Created landing page for sense|making company
 - Implemented clean, compact design with subtle use of color
